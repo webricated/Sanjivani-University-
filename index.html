@@ -1,280 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TY Corporate Readiness</title>
-
-<style>
-:root{
-    --primary:#0b3c5d;
-    --secondary:#328cc1;
-    --light:#f4f6f8;
-    --dark:#222;
-}
-
-*{box-sizing:border-box}
-
-body{
-    margin:0;
-    font-family: "Segoe UI", sans-serif;
-    background:var(--light);
-    color:var(--dark);
-    line-height:1.6;
-}
-
-/* HEADER */
-header{
-    background:linear-gradient(90deg,var(--primary),var(--secondary));
-    color:#fff;
-    padding:20px;
-    text-align:center;
-}
-header h1{margin:4px 0;font-size:24px}
-header h2{margin:2px 0;font-size:18px;font-weight:400}
-header h3{margin:2px 0;font-size:15px;font-weight:400}
-
-/* NAV */
-nav{
-    display:flex;
-    flex-wrap:wrap;
-    background:#fff;
-    border-bottom:2px solid var(--primary);
-}
-nav button{
-    flex:1;
-    min-width:150px;
-    padding:14px;
-    border:none;
-    background:#fff;
-    color:var(--primary);
-    font-size:15px;
-    cursor:pointer;
-    border-right:1px solid #ddd;
-}
-nav button:last-child{border-right:none}
-nav button:hover,
-nav button.active{
-    background:var(--primary);
-    color:#fff;
-}
-
-/* MAIN */
-main{
-    padding:20px;
-    max-width:1100px;
-    margin:auto;
-}
-
-/* SECTIONS */
-.section{display:none;animation:fade .3s ease}
-.section.active{display:block}
-
-@keyframes fade{from{opacity:0}to{opacity:1}}
-
-/* TABLE */
-table{
-    width:100%;
-    border-collapse:collapse;
-    background:#fff;
-    margin-bottom:25px;
-}
-th,td{
-    border:1px solid #000;
-    padding:10px;
-    font-size:15px;
-}
-th{background:#e9ecef;text-align:center}
-.unit-header{background:#dee2e6;font-weight:bold}
-.center{text-align:center}
-
-/* SUB NAV BUTTONS */
-.sub-buttons{
-    display:flex;
-    gap:10px;
-    flex-wrap:wrap;
-    margin-bottom:15px;
-}
-.sub-buttons button{
-    padding:10px 18px;
-    border:none;
-    background:var(--secondary);
-    color:#fff;
-    cursor:pointer;
-    border-radius:4px;
-}
-.sub-buttons button.active{
-    background:var(--primary);
-}
-
-/* ATTENDANCE */
-.attendance-box{
-    background:#fff;
-    padding:25px;
-    max-width:500px;
-    border-left:6px solid var(--primary);
-}
-select, .attendance-box button{
-    width:100%;
-    padding:12px;
-    font-size:15px;
-    margin-top:12px;
-}
-.attendance-box button{
-    background:var(--primary);
-    color:#fff;
-    border:none;
-    cursor:pointer;
-}
-
-/* IMAGE */
-.schedule img{
-    max-width:100%;
-    border:2px solid #000;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-    nav button{flex:100%}
-    main{padding:12px}
-}
-</style>
+    <meta charset="UTF-8">
+    <title>Course Plan - TY Corporate Readiness</title>
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            margin: 30px;
+            color: #000;
+        }
+        h1, h2, h3 {
+            text-align: center;
+            margin: 5px 0;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px 10px;
+            vertical-align: top;
+            font-size: 15px;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+        .unit-header {
+            background-color: #e6e6e6;
+            font-weight: bold;
+            text-align: left;
+        }
+        .center {
+            text-align: center;
+        }
+        .small {
+            font-size: 14px;
+        }
+        .schedule {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .schedule img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #000;
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
 <h1>SANJIVANI COLLEGE OF ENGINEERING, KOPARGAON</h1>
 <h2>Department of Training & Placement</h2>
-<h3>TY Corporate Readiness | Semester VI | AY 2025–26</h3>
-</header>
-
-<nav>
-<button class="active" onclick="showSection('overview')">Course Overview</button>
-<button onclick="showSection('lectures')">Lecture Content</button>
-<button onclick="showSection('notes')">Unit-wise Notes</button>
-<button onclick="showSection('qb')">Question Bank</button>
-<button onclick="showSection('attendance')">Attendance</button>
-<button onclick="showSection('schedule')">Lecture Schedule</button>
-</nav>
-
-<main>
-
-<!-- COURSE OVERVIEW -->
-<section id="overview" class="section active">
-<table>
-<tr><th>Course Name</th><th>Semester</th><th>Total Hours</th><th>Course Outcomes</th></tr>
-<tr>
-<td>TY Corporate Readiness</td>
-<td class="center">VI</td>
-<td class="center">30</td>
-<td>
-CO1 – Interview & Psychometric Readiness<br>
-CO2 – Verbal & Quantitative Skills<br>
-CO3 – Logical & Advanced Quantitative Ability
-</td>
-</tr>
-</table>
+<h3>Course Plan – TY Corporate Readiness</h3>
+<div class="subtitle">Academic Year: 2025–26</div>
 
 <table>
-<tr class="unit-header"><td colspan="3">Units Covered (Summary)</td></tr>
-<tr><th>Unit</th><th>Title</th><th>Hours</th></tr>
-<tr><td class="center">I</td><td>Job Interviews & Psychometric Assessment</td><td class="center">10</td></tr>
-<tr><td class="center">II</td><td>Verbal Reasoning II & Quantitative Ability II</td><td class="center">10</td></tr>
-<tr><td class="center">III</td><td>Quantitative Ability III & Logical Reasoning II</td><td class="center">10</td></tr>
+    <tr>
+        <th>Course Name</th>
+        <th>Semester</th>
+        <th>Total Hours</th>
+        <th>Course Outcomes</th>
+    </tr>
+    <tr>
+        <td>TY Corporate Readiness</td>
+        <td class="center">VI</td>
+        <td class="center">30</td>
+        <td>
+            CO1 – Interview & Psychometric Readiness<br>
+            CO2 – Verbal & Quantitative Skills<br>
+            CO3 – Logical & Advanced Quantitative Ability
+        </td>
+    </tr>
 </table>
-</section>
 
-<!-- LECTURE CONTENT -->
-<section id="lectures" class="section">
-<h3>Lecture-wise Course Plan</h3>
-<p><b>Includes L1–L30 exactly as approved.</b></p>
-<!-- 👉 Paste YOUR FULL lecture tables here (UNCHANGED) -->
-</section>
+<!-- UNIT I -->
+<table>
+    <tr class="unit-header">
+        <td colspan="4">UNIT – I: Preparation for Job Interviews & Psychometric Assessment</td>
+    </tr>
+    <tr>
+        <th>Unit No.</th>
+        <th>Topics Covered</th>
+        <th>Hours</th>
+        <th>CO</th>
+    </tr>
+    <tr>
+        <td class="center">I</td>
+        <td>
+            <b>Job Interview Preparation</b><br>
+            • Types of Job Interviews (HR, Technical, Managerial, Panel, Virtual)<br>
+            • Most Common Interview Questions<br>
+            • Best Practices Before, During & After Interview<br>
+            • Expected Technical Questions<br>
+            • Strategic Questions at the End of Interview<br>
+            • Behavioural Interviews – STAR Approach & Box Test<br><br>
 
-<!-- UNIT NOTES -->
-<section id="notes" class="section">
-<h3>Unit-wise Notes</h3>
-<div class="sub-buttons">
-<button class="active" onclick="showSub('notes1')">Unit I</button>
-<button onclick="showSub('notes2')">Unit II</button>
-<button onclick="showSub('notes3')">Unit III</button>
+            <b>Psychometric Assessment</b><br>
+            • Introduction to Psychometric Tests<br>
+            • Types of Psychometric Tests<br>
+            • Big Five Personality Traits (OCEAN Model)<br>
+            • Personality Traits & Workplace Behaviour<br>
+            • Tips for Personality Assessments<br>
+            • Gamification-based Psychometric Tests
+        </td>
+        <td class="center">10</td>
+        <td class="center">CO1</td>
+    </tr>
+</table>
+
+<!-- UNIT II -->
+<table>
+    <tr class="unit-header">
+        <td colspan="4">UNIT – II: Verbal Reasoning – II & Quantitative Ability – II</td>
+    </tr>
+    <tr>
+        <th>Unit No.</th>
+        <th>Topics Covered</th>
+        <th>Hours</th>
+        <th>CO</th>
+    </tr>
+    <tr>
+        <td class="center">II</td>
+        <td>
+            <b>Verbal Reasoning – II</b><br>
+            • Para Jumbles<br>
+            • Sentence Completion<br>
+            • Critical Reasoning<br>
+            • Conversational Test<br><br>
+
+            <b>Quantitative Ability – II</b><br>
+            • Ratio & Proportion, Continued Proportion, Ages<br>
+            • Geometry – Lines & Angles, Triangle, Quadrilateral, Polygon, Circle<br>
+            • Mensuration – 2D & 3D Formulae, Area, Perimeter, CSA, TSA, Volume<br>
+            • Solids – Cylinder, Sphere, Cube, Cuboid, Cone<br>
+            • Partnership<br>
+            • Average & Weighted Average<br>
+            • Mixtures & Allegation<br>
+            • Speed, Distance & Time – Trains, Boats & Streams
+        </td>
+        <td class="center">10</td>
+        <td class="center">CO2</td>
+    </tr>
+</table>
+
+<!-- UNIT III -->
+<table>
+    <tr class="unit-header">
+        <td colspan="4">UNIT – III: Quantitative Ability – III & Logical Reasoning – II</td>
+    </tr>
+    <tr>
+        <th>Unit No.</th>
+        <th>Topics Covered</th>
+        <th>Hours</th>
+        <th>CO</th>
+    </tr>
+    <tr>
+        <td class="center">III</td>
+        <td>
+            <b>Quantitative Ability – III</b><br>
+            • Time & Work, Pipes & Cisterns<br>
+            • Work Equivalence, Division of Wages<br>
+            • Number System – Factors, Multiples, HCF & LCM<br>
+            • Power Cycle<br>
+            • Fundamental Counting Principle<br>
+            • Permutation & Combination (Relation between P & C)<br>
+            • Probability – Coin, Dice & Cards<br><br>
+
+            <b>Logical Reasoning – II</b><br>
+            • Direction Sense<br>
+            • Blood Relations<br>
+            • Coding & Decoding<br>
+            • Visual Reasoning & Series<br>
+            • Statement & Conclusions<br>
+            • Syllogisms<br>
+            • Analogy<br>
+            • Data Arrangements<br>
+            • Cryptarithmetic
+        </td>
+        <td class="center">10</td>
+        <td class="center">CO3</td>
+    </tr>
+</table>
+
+<button onclick="window.location.href='course-plan.html'" 
+    style="display:block;margin:20px auto;padding:10px 25px;font-size:16px;">
+    Go to Course Plan
+</button>
+
+<button onclick="window.location.href='lecture-notes.html'" 
+    style="display:block;margin:15px auto;padding:10px 25px;font-size:16px;">
+    Lecture Notes
+</button>
+
+<!-- Lecture Schedule Image -->
+<div class="schedule">
+    <h3>Class Lecture Routine</h3>
+    <img src="lec-schedule.png" alt="Lecture Schedule">
 </div>
-<div id="notes1">📘 Unit I Notes Content / PDF Link</div>
-<div id="notes2" style="display:none">📗 Unit II Notes Content / PDF Link</div>
-<div id="notes3" style="display:none">📙 Unit III Notes Content / PDF Link</div>
-</section>
-
-<!-- QUESTION BANK -->
-<section id="qb" class="section">
-<h3>Question Bank</h3>
-<div class="sub-buttons">
-<button class="active" onclick="showQB('qb1')">Unit I</button>
-<button onclick="showQB('qb2')">Unit II</button>
-<button onclick="showQB('qb3')">Unit III</button>
-</div>
-<div id="qb1">📝 Unit I Question Bank</div>
-<div id="qb2" style="display:none">📝 Unit II Question Bank</div>
-<div id="qb3" style="display:none">📝 Unit III Question Bank</div>
-</section>
-
-<!-- ATTENDANCE -->
-<section id="attendance" class="section">
-<div class="attendance-box">
-<h3>Check Attendance</h3>
-<select id="division">
-<option value="">-- Select Division --</option>
-<option value="civilA">Civil A</option>
-<option value="civilB">Civil B</option>
-<option value="mechA">Mechanical A</option>
-<option value="mechB">Mechanical B</option>
-<option value="compA">Computer A</option>
-<option value="compB">Computer B</option>
-</select>
-<button onclick="openAttendance()">Open Attendance Sheet</button>
-</div>
-</section>
-
-<!-- SCHEDULE -->
-<section id="schedule" class="section schedule">
-<h3>Lecture Schedule</h3>
-<img src="lec-schedule.png">
-</section>
-
-</main>
-
-<script>
-function showSection(id){
-    document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
-    document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-    event.target.classList.add('active');
-}
-
-function showSub(id){
-    document.querySelectorAll('#notes div').forEach(d=>d.style.display='none');
-    document.getElementById(id).style.display='block';
-}
-
-function showQB(id){
-    document.querySelectorAll('#qb div').forEach(d=>d.style.display='none');
-    document.getElementById(id).style.display='block';
-}
-
-function openAttendance(){
-    const links={
-        civilA:"https://docs.google.com/spreadsheets/d/1IXZafutIG-p5joiEWif9Bz-_M4WD_jnT416vr5Vh-sE/edit?usp=sharing",
-        civilB:"https://docs.google.com/spreadsheets/d/1IXZafutIG-p5joiEWif9Bz-_M4WD_jnT416vr5Vh-sE/edit?gid=2134513815#gid=2134513815",
-        compA:"https://docs.google.com/spreadsheets/d/1IXZafutIG-p5joiEWif9Bz-_M4WD_jnT416vr5Vh-sE/edit?gid=532662533#gid=532662533",
-        compB:"https://docs.google.com/spreadsheets/d/1IXZafutIG-p5joiEWif9Bz-_M4WD_jnT416vr5Vh-sE/edit?gid=187448904#gid=187448904",
-        mechA:"https://docs.google.com/spreadsheets/d/1IXZafutIG-p5joiEWif9Bz-_M4WD_jnT416vr5Vh-sE/edit?gid=2006567263#gid=2006567263",
-        mechB:"https://docs.google.com/spreadsheets/d/1IXZafutIG-p5joiEWif9Bz-_M4WD_jnT416vr5Vh-sE/edit?gid=579234528#gid=579234528"
-    };
-    const d=document.getElementById("division").value;
-    if(links[d]) window.open(links[d],"_blank");
-    else alert("Please select a division");
-}
-</script>
 
 </body>
 </html>
