@@ -1,263 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Plan - TY Corporate Readiness</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TY Corporate Readiness</title>
 
-    <style>
-        body {
-            font-family: "Times New Roman", serif;
-            margin: 20px;
-            color: #000;
-        }
+<style>
+body{
+    margin:0;
+    font-family: "Segoe UI", sans-serif;
+    background:#f4f6f8;
+}
 
-        h1, h2, h3 {
-            text-align: center;
-            margin: 6px 0;
-        }
+/* HEADER */
+header{
+    background:#002147;
+    color:#fff;
+    padding:18px;
+    text-align:center;
+}
+header h1{margin:5px 0;font-size:24px;}
+header h2{margin:3px 0;font-size:18px;font-weight:400;}
+header h3{margin:3px 0;font-size:16px;font-weight:400;}
 
-        .subtitle {
-            text-align: center;
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
+/* LAYOUT */
+.container{
+    display:flex;
+    min-height:calc(100vh - 120px);
+}
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 25px;
-        }
+/* SIDEBAR */
+nav{
+    width:260px;
+    background:#ffffff;
+    border-right:1px solid #ccc;
+}
+nav button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-bottom:1px solid #e0e0e0;
+    background:#fff;
+    text-align:left;
+    font-size:15px;
+    cursor:pointer;
+}
+nav button:hover,
+nav button.active{
+    background:#002147;
+    color:#fff;
+}
 
-        th, td {
-            border: 1px solid #000;
-            padding: 8px 10px;
-            vertical-align: top;
-            font-size: 15px;
-        }
+/* CONTENT */
+main{
+    flex:1;
+    padding:25px;
+}
+.section{
+    display:none;
+    animation:fade 0.3s ease-in;
+}
+.section.active{
+    display:block;
+}
 
-        th {
-            background-color: #f2f2f2;
-            text-align: center;
-        }
+@keyframes fade{
+    from{opacity:0}
+    to{opacity:1}
+}
 
-        .unit-header {
-            background-color: #e6e6e6;
-            font-weight: bold;
-            text-align: left;
-        }
+/* TABLE */
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+}
+th,td{
+    border:1px solid #000;
+    padding:10px;
+    font-size:15px;
+}
+th{background:#e9ecef;text-align:center}
+.unit-header{
+    background:#dee2e6;
+    font-weight:bold;
+}
+.center{text-align:center}
 
-        .center {
-            text-align: center;
-        }
+/* ATTENDANCE */
+.attendance-box{
+    background:#fff;
+    padding:25px;
+    max-width:500px;
+}
+select,button{
+    padding:10px;
+    font-size:15px;
+    margin-top:10px;
+}
+button{
+    background:#002147;
+    color:#fff;
+    border:none;
+    cursor:pointer;
+}
 
-        /* Responsive Tables */
-        @media (max-width: 768px) {
-            body {
-                margin: 10px;
-            }
+/* IMAGE */
+.schedule img{
+    max-width:100%;
+    border:1px solid #000;
+}
 
-            table, th, td {
-                font-size: 14px;
-            }
-        }
-
-        /* Attendance Section */
-        .attendance-box {
-            text-align: center;
-            margin: 30px 0;
-        }
-
-        select, button {
-            padding: 10px 15px;
-            font-size: 15px;
-            margin: 8px;
-        }
-
-        button {
-            cursor: pointer;
-        }
-
-        .schedule {
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .schedule img {
-            max-width: 100%;
-            height: auto;
-            border: 1px solid #000;
-        }
-    </style>
+/* MOBILE */
+@media(max-width:768px){
+    .container{flex-direction:column}
+    nav{width:100%}
+}
+</style>
 </head>
 
 <body>
 
+<header>
 <h1>SANJIVANI COLLEGE OF ENGINEERING, KOPARGAON</h1>
 <h2>Department of Training & Placement</h2>
-<h3>Course Plan – TY Corporate Readiness</h3>
-<div class="subtitle">Academic Year: 2025–26</div>
+<h3>TY Corporate Readiness | AY 2025–26</h3>
+</header>
 
+<div class="container">
+
+<!-- NAVIGATION -->
+<nav>
+<button class="active" onclick="showSection('course')">Course Overview</button>
+<button onclick="showSection('unit1')">UNIT I</button>
+<button onclick="showSection('unit2')">UNIT II</button>
+<button onclick="showSection('unit3')">UNIT III</button>
+<button onclick="showSection('attendance')">Attendance</button>
+<button onclick="showSection('schedule')">Lecture Schedule</button>
+</nav>
+
+<!-- CONTENT -->
+<main>
+
+<!-- COURSE -->
+<section id="course" class="section active">
 <table>
-    <tr>
-        <th>Course Name</th>
-        <th>Semester</th>
-        <th>Total Hours</th>
-        <th>Course Outcomes</th>
-    </tr>
-    <tr>
-        <td>TY Corporate Readiness</td>
-        <td class="center">VI</td>
-        <td class="center">30</td>
-        <td>
-            CO1 – Interview & Psychometric Readiness<br>
-            CO2 – Verbal & Quantitative Skills<br>
-            CO3 – Logical & Advanced Quantitative Ability
-        </td>
-    </tr>
+<tr>
+<th>Course Name</th><th>Semester</th><th>Total Hours</th><th>Course Outcomes</th>
+</tr>
+<tr>
+<td>TY Corporate Readiness</td>
+<td class="center">VI</td>
+<td class="center">30</td>
+<td>
+CO1 – Interview & Psychometric Readiness<br>
+CO2 – Verbal & Quantitative Skills<br>
+CO3 – Logical & Advanced Quantitative Ability
+</td>
+</tr>
 </table>
+</section>
 
 <!-- UNIT I -->
+<section id="unit1" class="section">
 <table>
-    <tr class="unit-header">
-        <td colspan="4">UNIT – I: Preparation for Job Interviews & Psychometric Assessment</td>
-    </tr>
-    <tr>
-        <th>Unit No.</th>
-        <th>Topics Covered</th>
-        <th>Hours</th>
-        <th>CO</th>
-    </tr>
-    <tr>
-        <td class="center">I</td>
-        <td>
-            <b>Job Interview Preparation</b><br>
-            • Types of Job Interviews<br>
-            • Common Interview Questions<br>
-            • Interview Best Practices<br>
-            • Behavioural Interviews – STAR Approach<br><br>
-
-            <b>Psychometric Assessment</b><br>
-            • Psychometric Tests<br>
-            • Big Five Personality Traits (OCEAN)<br>
-            • Gamified Assessments
-        </td>
-        <td class="center">10</td>
-        <td class="center">CO1</td>
-    </tr>
+<tr class="unit-header"><td colspan="4">UNIT – I: Preparation for Job Interviews & Psychometric Assessment</td></tr>
+<tr><th>Unit</th><th>Topics</th><th>Hours</th><th>CO</th></tr>
+<tr>
+<td class="center">I</td>
+<td>
+<b>Job Interview Preparation</b><br>
+• Interview Types<br>
+• Common Questions<br>
+• Best Practices<br>
+• STAR & Box Technique<br><br>
+<b>Psychometric Assessment</b><br>
+• Types of Tests<br>
+• OCEAN Model<br>
+• Workplace Behaviour<br>
+• Gamification
+</td>
+<td class="center">10</td>
+<td class="center">CO1</td>
+</tr>
 </table>
+</section>
 
 <!-- UNIT II -->
+<section id="unit2" class="section">
 <table>
-    <tr class="unit-header">
-        <td colspan="4">UNIT – II: Verbal Reasoning – II & Quantitative Ability – II</td>
-    </tr>
-    <tr>
-        <th>Unit No.</th>
-        <th>Topics Covered</th>
-        <th>Hours</th>
-        <th>CO</th>
-    </tr>
-    <tr>
-        <td class="center">II</td>
-        <td>
-            <b>Verbal Reasoning</b><br>
-            • Para Jumbles<br>
-            • Sentence Completion<br>
-            • Critical Reasoning<br><br>
-
-            <b>Quantitative Ability</b><br>
-            • Ratio & Proportion<br>
-            • Geometry & Mensuration<br>
-            • Time, Speed & Distance
-        </td>
-        <td class="center">10</td>
-        <td class="center">CO2</td>
-    </tr>
+<tr class="unit-header"><td colspan="4">UNIT – II: Verbal Reasoning – II & Quantitative Ability – II</td></tr>
+<tr><th>Unit</th><th>Topics</th><th>Hours</th><th>CO</th></tr>
+<tr>
+<td class="center">II</td>
+<td>
+<b>Verbal Reasoning</b><br>
+• Para Jumbles<br>
+• Sentence Completion<br>
+• Critical Reasoning<br><br>
+<b>Quantitative Ability</b><br>
+• Ratio & Proportion<br>
+• Geometry & Mensuration<br>
+• Speed, Distance & Time
+</td>
+<td class="center">10</td>
+<td class="center">CO2</td>
+</tr>
 </table>
+</section>
 
 <!-- UNIT III -->
+<section id="unit3" class="section">
 <table>
-    <tr class="unit-header">
-        <td colspan="4">UNIT – III: Quantitative Ability – III & Logical Reasoning – II</td>
-    </tr>
-    <tr>
-        <th>Unit No.</th>
-        <th>Topics Covered</th>
-        <th>Hours</th>
-        <th>CO</th>
-    </tr>
-    <tr>
-        <td class="center">III</td>
-        <td>
-            <b>Quantitative Ability</b><br>
-            • Time & Work<br>
-            • Probability & P&C<br><br>
-
-            <b>Logical Reasoning</b><br>
-            • Blood Relations<br>
-            • Coding-Decoding<br>
-            • Cryptarithmetic
-        </td>
-        <td class="center">10</td>
-        <td class="center">CO3</td>
-    </tr>
+<tr class="unit-header"><td colspan="4">UNIT – III: Quantitative Ability – III & Logical Reasoning – II</td></tr>
+<tr><th>Unit</th><th>Topics</th><th>Hours</th><th>CO</th></tr>
+<tr>
+<td class="center">III</td>
+<td>
+<b>Quantitative Ability</b><br>
+• Time & Work<br>
+• P&C & Probability<br><br>
+<b>Logical Reasoning</b><br>
+• Blood Relations<br>
+• Coding-Decoding<br>
+• Cryptarithmetic
+</td>
+<td class="center">10</td>
+<td class="center">CO3</td>
+</tr>
 </table>
+</section>
 
-<!-- Attendance Section -->
+<!-- ATTENDANCE -->
+<section id="attendance" class="section">
 <div class="attendance-box">
-    <h3>Check Attendance</h3>
-
-    <select id="division">
-        <option value="">-- Select Division --</option>
-        <option value="civilA">Civil A</option>
-        <option value="civilB">Civil B</option>
-        <option value="mechA">Mechanical A</option>
-        <option value="mechB">Mechanical B</option>
-        <option value="compA">Computer A</option>
-        <option value="compB">Computer B</option>
-    </select>
-
-    <br>
-
-    <button onclick="openAttendance()">Check Attendance</button>
+<h3>Check Attendance</h3>
+<select id="division">
+<option value="">-- Select Division --</option>
+<option value="civilA">Civil A</option>
+<option value="civilB">Civil B</option>
+<option value="mechA">Mechanical A</option>
+<option value="mechB">Mechanical B</option>
+<option value="compA">Computer A</option>
+<option value="compB">Computer B</option>
+</select><br>
+<button onclick="openAttendance()">Open Sheet</button>
 </div>
+</section>
 
-<!-- Buttons -->
-<button onclick="window.location.href='course-plan.html'" 
-    style="display:block;margin:20px auto;">
-    Go to Course Plan
-</button>
+<!-- SCHEDULE -->
+<section id="schedule" class="section schedule">
+<h3>Class Lecture Routine</h3>
+<img src="lec-schedule.png">
+</section>
 
-<button onclick="window.location.href='lecture-notes.html'" 
-    style="display:block;margin:15px auto;">
-    Lecture Notes
-</button>
-
-<!-- Lecture Schedule -->
-<div class="schedule">
-    <h3>Class Lecture Routine</h3>
-    <img src="lec-schedule.png" alt="Lecture Schedule">
+</main>
 </div>
 
 <script>
-function openAttendance() {
-    const division = document.getElementById("division").value;
+function showSection(id){
+    document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+    document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    event.target.classList.add('active');
+}
 
-    const links = {
-        civilA: "https://docs.google.com/spreadsheets/d/1IXZafutIG-p5joiEWif9Bz-_M4WD_jnT416vr5Vh-sE/edit?usp=sharing",
-        civilB: "https://docs.google.com/spreadsheets/d/1IXZafutIG-p5joiEWif9Bz-_M4WD_jnT416vr5Vh-sE/edit?gid=2134513815#gid=2134513815",
-        compA: "https://docs.google.com/spreadsheets/d/1IXZafutIG-p5joiEWif9Bz-_M4WD_jnT416vr5Vh-sE/edit?gid=532662533#gid=532662533",
-        compB: "https://docs.google.com/spreadsheets/d/1IXZafutIG-p5joiEWif9Bz-_M4WD_jnT416vr5Vh-sE/edit?gid=187448904#gid=187448904",
-        mechA: "https://docs.google.com/spreadsheets/d/1IXZafutIG-p5joiEWif9Bz-_M4WD_jnT416vr5Vh-sE/edit?gid=2006567263#gid=2006567263",
-        mechB: "https://docs.google.com/spreadsheets/d/1IXZafutIG-p5joiEWif9Bz-_M4WD_jnT416vr5Vh-sE/edit?gid=579234528#gid=579234528"
+function openAttendance(){
+    const links={
+        civilA:"https://docs.google.com/spreadsheets/d/1IXZafutIG-p5joiEWif9Bz-_M4WD_jnT416vr5Vh-sE/edit?usp=sharing",
+        civilB:"https://docs.google.com/spreadsheets/d/1IXZafutIG-p5joiEWif9Bz-_M4WD_jnT416vr5Vh-sE/edit?gid=2134513815#gid=2134513815",
+        compA:"https://docs.google.com/spreadsheets/d/1IXZafutIG-p5joiEWif9Bz-_M4WD_jnT416vr5Vh-sE/edit?gid=532662533#gid=532662533",
+        compB:"https://docs.google.com/spreadsheets/d/1IXZafutIG-p5joiEWif9Bz-_M4WD_jnT416vr5Vh-sE/edit?gid=187448904#gid=187448904",
+        mechA:"https://docs.google.com/spreadsheets/d/1IXZafutIG-p5joiEWif9Bz-_M4WD_jnT416vr5Vh-sE/edit?gid=2006567263#gid=2006567263",
+        mechB:"https://docs.google.com/spreadsheets/d/1IXZafutIG-p5joiEWif9Bz-_M4WD_jnT416vr5Vh-sE/edit?gid=579234528#gid=579234528"
     };
-
-    if (links[division]) {
-        window.open(links[division], "_blank");
-    } else {
-        alert("Please select a division first.");
-    }
+    const d=document.getElementById("division").value;
+    if(links[d]) window.open(links[d],"_blank");
+    else alert("Please select a division");
 }
 </script>
 
