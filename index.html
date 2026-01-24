@@ -2,52 +2,87 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course Plan - TY Corporate Readiness</title>
+
     <style>
         body {
             font-family: "Times New Roman", serif;
-            margin: 30px;
+            margin: 20px;
             color: #000;
         }
+
         h1, h2, h3 {
             text-align: center;
-            margin: 5px 0;
+            margin: 6px 0;
         }
+
         .subtitle {
             text-align: center;
             font-size: 16px;
             margin-bottom: 20px;
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 25px;
         }
+
         th, td {
             border: 1px solid #000;
             padding: 8px 10px;
             vertical-align: top;
             font-size: 15px;
         }
+
         th {
             background-color: #f2f2f2;
             text-align: center;
         }
+
         .unit-header {
             background-color: #e6e6e6;
             font-weight: bold;
             text-align: left;
         }
+
         .center {
             text-align: center;
         }
-        .small {
-            font-size: 14px;
+
+        /* Responsive Tables */
+        @media (max-width: 768px) {
+            body {
+                margin: 10px;
+            }
+
+            table, th, td {
+                font-size: 14px;
+            }
         }
+
+        /* Attendance Section */
+        .attendance-box {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        select, button {
+            padding: 10px 15px;
+            font-size: 15px;
+            margin: 8px;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
         .schedule {
             text-align: center;
             margin-top: 30px;
         }
+
         .schedule img {
             max-width: 100%;
             height: auto;
@@ -55,6 +90,7 @@
         }
     </style>
 </head>
+
 <body>
 
 <h1>SANJIVANI COLLEGE OF ENGINEERING, KOPARGAON</h1>
@@ -96,20 +132,15 @@
         <td class="center">I</td>
         <td>
             <b>Job Interview Preparation</b><br>
-            • Types of Job Interviews (HR, Technical, Managerial, Panel, Virtual)<br>
-            • Most Common Interview Questions<br>
-            • Best Practices Before, During & After Interview<br>
-            • Expected Technical Questions<br>
-            • Strategic Questions at the End of Interview<br>
-            • Behavioural Interviews – STAR Approach & Box Test<br><br>
+            • Types of Job Interviews<br>
+            • Common Interview Questions<br>
+            • Interview Best Practices<br>
+            • Behavioural Interviews – STAR Approach<br><br>
 
             <b>Psychometric Assessment</b><br>
-            • Introduction to Psychometric Tests<br>
-            • Types of Psychometric Tests<br>
-            • Big Five Personality Traits (OCEAN Model)<br>
-            • Personality Traits & Workplace Behaviour<br>
-            • Tips for Personality Assessments<br>
-            • Gamification-based Psychometric Tests
+            • Psychometric Tests<br>
+            • Big Five Personality Traits (OCEAN)<br>
+            • Gamified Assessments
         </td>
         <td class="center">10</td>
         <td class="center">CO1</td>
@@ -130,21 +161,15 @@
     <tr>
         <td class="center">II</td>
         <td>
-            <b>Verbal Reasoning – II</b><br>
+            <b>Verbal Reasoning</b><br>
             • Para Jumbles<br>
             • Sentence Completion<br>
-            • Critical Reasoning<br>
-            • Conversational Test<br><br>
+            • Critical Reasoning<br><br>
 
-            <b>Quantitative Ability – II</b><br>
-            • Ratio & Proportion, Continued Proportion, Ages<br>
-            • Geometry – Lines & Angles, Triangle, Quadrilateral, Polygon, Circle<br>
-            • Mensuration – 2D & 3D Formulae, Area, Perimeter, CSA, TSA, Volume<br>
-            • Solids – Cylinder, Sphere, Cube, Cuboid, Cone<br>
-            • Partnership<br>
-            • Average & Weighted Average<br>
-            • Mixtures & Allegation<br>
-            • Speed, Distance & Time – Trains, Boats & Streams
+            <b>Quantitative Ability</b><br>
+            • Ratio & Proportion<br>
+            • Geometry & Mensuration<br>
+            • Time, Speed & Distance
         </td>
         <td class="center">10</td>
         <td class="center">CO2</td>
@@ -165,24 +190,13 @@
     <tr>
         <td class="center">III</td>
         <td>
-            <b>Quantitative Ability – III</b><br>
-            • Time & Work, Pipes & Cisterns<br>
-            • Work Equivalence, Division of Wages<br>
-            • Number System – Factors, Multiples, HCF & LCM<br>
-            • Power Cycle<br>
-            • Fundamental Counting Principle<br>
-            • Permutation & Combination (Relation between P & C)<br>
-            • Probability – Coin, Dice & Cards<br><br>
+            <b>Quantitative Ability</b><br>
+            • Time & Work<br>
+            • Probability & P&C<br><br>
 
-            <b>Logical Reasoning – II</b><br>
-            • Direction Sense<br>
+            <b>Logical Reasoning</b><br>
             • Blood Relations<br>
-            • Coding & Decoding<br>
-            • Visual Reasoning & Series<br>
-            • Statement & Conclusions<br>
-            • Syllogisms<br>
-            • Analogy<br>
-            • Data Arrangements<br>
+            • Coding-Decoding<br>
             • Cryptarithmetic
         </td>
         <td class="center">10</td>
@@ -190,21 +204,62 @@
     </tr>
 </table>
 
+<!-- Attendance Section -->
+<div class="attendance-box">
+    <h3>Check Attendance</h3>
+
+    <select id="division">
+        <option value="">-- Select Division --</option>
+        <option value="civilA">Civil A</option>
+        <option value="civilB">Civil B</option>
+        <option value="mechA">Mechanical A</option>
+        <option value="mechB">Mechanical B</option>
+        <option value="compA">Computer A</option>
+        <option value="compB">Computer B</option>
+    </select>
+
+    <br>
+
+    <button onclick="openAttendance()">Check Attendance</button>
+</div>
+
+<!-- Buttons -->
 <button onclick="window.location.href='course-plan.html'" 
-    style="display:block;margin:20px auto;padding:10px 25px;font-size:16px;">
+    style="display:block;margin:20px auto;">
     Go to Course Plan
 </button>
 
 <button onclick="window.location.href='lecture-notes.html'" 
-    style="display:block;margin:15px auto;padding:10px 25px;font-size:16px;">
+    style="display:block;margin:15px auto;">
     Lecture Notes
 </button>
 
-<!-- Lecture Schedule Image -->
+<!-- Lecture Schedule -->
 <div class="schedule">
     <h3>Class Lecture Routine</h3>
     <img src="lec-schedule.png" alt="Lecture Schedule">
 </div>
+
+<script>
+function openAttendance() {
+    const division = document.getElementById("division").value;
+
+    const links = {
+        civilA: "https://docs.google.com/spreadsheets/d/1IXZafutIG-p5joiEWif9Bz-_M4WD_jnT416vr5Vh-sE/edit?usp=sharing",
+        civilB: "https://docs.google.com/spreadsheets/d/1IXZafutIG-p5joiEWif9Bz-_M4WD_jnT416vr5Vh-sE/edit?gid=2134513815#gid=2134513815",
+        compA: "https://docs.google.com/spreadsheets/d/1IXZafutIG-p5joiEWif9Bz-_M4WD_jnT416vr5Vh-sE/edit?gid=532662533#gid=532662533",
+        compB: "https://docs.google.com/spreadsheets/d/1IXZafutIG-p5joiEWif9Bz-_M4WD_jnT416vr5Vh-sE/edit?gid=187448904#gid=187448904",
+        mechA: "https://docs.google.com/spreadsheets/d/1IXZafutIG-p5joiEWif9Bz-_M4WD_jnT416vr5Vh-sE/edit?gid=2006567263#gid=2006567263",
+        mechB: "https://docs.google.com/spreadsheets/d/1IXZafutIG-p5joiEWif9Bz-_M4WD_jnT416vr5Vh-sE/edit?gid=579234528#gid=579234528"
+    };
+
+    if (links[division]) {
+        window.open(links[division], "_blank");
+    } else {
+        alert("Please select a division first.");
+    }
+}
+</script>
 
 </body>
 </html>
