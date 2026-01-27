@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Application for EPF</title>
 
-    <!-- Ensures proper scaling on smartphones -->
+    <!-- Mobile responsiveness -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
@@ -12,10 +12,10 @@
             font-family: "Times New Roman", serif;
             line-height: 1.6;
             margin: 20px;
-            background: #fff;
+            background: #ffffff;
         }
 
-        /* A4 size setup for print */
+        /* A4 print settings */
         @page {
             size: A4;
             margin: 25mm;
@@ -48,14 +48,11 @@
             margin-bottom: 40px;
         }
 
+        /* Side-by-side signatures on larger screens */
         @media (min-width: 600px) {
             .sign-box {
                 width: 45%;
             }
-        }
-
-        .hr-sign {
-            margin-top: 60px;
         }
     </style>
 </head>
@@ -116,7 +113,10 @@
         Date: 27 January 2026
     </p>
 
+    <!-- Signatures -->
     <div class="signatures">
+
+        <!-- LEFT: HOD / Dean -->
         <div class="sign-box">
             ___________________________<br>
             Signature of HOD / Dean<br><br>
@@ -125,6 +125,7 @@
             Dean, Training & Placement
         </div>
 
+        <!-- RIGHT: HR Authority -->
         <div class="sign-box">
             ___________________________<br>
             Signature of HR Authority<br><br>
@@ -132,6 +133,7 @@
             Designation:<br>
             Date:
         </div>
+
     </div>
 
 </div>
