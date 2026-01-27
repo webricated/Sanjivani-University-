@@ -3,41 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <title>Application for EPF</title>
+
+    <!-- Ensures proper scaling on smartphones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
             font-family: "Times New Roman", serif;
-            margin: 50px;
             line-height: 1.6;
+            margin: 20px;
+            background: #fff;
         }
+
+        /* A4 size setup for print */
+        @page {
+            size: A4;
+            margin: 25mm;
+        }
+
         .container {
-            width: 100%;
+            max-width: 210mm; /* A4 width */
+            margin: auto;
         }
+
         .subject {
             font-weight: bold;
             margin-top: 20px;
         }
+
         .content {
-            margin-top: 20px;
+            margin-top: 15px;
             text-align: justify;
         }
+
         .signatures {
-            margin-top: 60px;
-            width: 100%;
-        }
-        .left-sign {
-            float: left;
-            width: 40%;
-            text-align: left;
-        }
-        .right-sign {
-            float: right;
-            width: 40%;
-            text-align: left;
-        }
-        .hr-sign {
-            clear: both;
             margin-top: 80px;
-            text-align: left;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .sign-box {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        @media (min-width: 600px) {
+            .sign-box {
+                width: 45%;
+            }
+        }
+
+        .hr-sign {
+            margin-top: 60px;
         }
     </style>
 </head>
@@ -90,41 +108,30 @@
     </p>
 
     <p>
-        Yours obediently,
+        Yours obediently,<br><br>
+        Mukund Kumar<br>
+        Trainer<br>
+        Employee ID: 0120260N<br>
+        Training & Placement Department<br>
+        Date: 27 January 2026
     </p>
 
     <div class="signatures">
-        <div class="left-sign">
-            <p>
-                ___________________________<br>
-                Signature of Applicant<br><br>
-                Name: Mukund Kumar<br>
-                Designation: Trainer<br>
-                Employee ID: 0120260N<br>
-                Department: Training & Placement<br>
-                Date: 27 January 2026
-            </p>
+        <div class="sign-box">
+            ___________________________<br>
+            Signature of HOD / Dean<br><br>
+            Dr. V. M. Tidake<br>
+            Head of Department &<br>
+            Dean, Training & Placement
         </div>
 
-        <div class="right-sign">
-            <p>
-                ___________________________<br>
-                Signature of HOD / Dean<br><br>
-                Dr. V. M. Tidake<br>
-                Head of Department &<br>
-                Dean, Training & Placement
-            </p>
-        </div>
-    </div>
-
-    <div class="hr-sign">
-        <p>
+        <div class="sign-box">
             ___________________________<br>
             Signature of HR Authority<br><br>
             Name:<br>
             Designation:<br>
             Date:
-        </p>
+        </div>
     </div>
 
 </div>
